@@ -8,6 +8,7 @@
 }
 
 :root{
+    --primary-color: #0A0826;
     --secondary-color: #3A3A3A;
     --btn-color: #E02C6D;
 }
@@ -117,6 +118,7 @@ section{
 
 /* product styles */
 
+
 .product-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -126,9 +128,6 @@ section{
     
 }
 .product-sec > h2{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
     text-align: center;
     color: var(--secondary-color);
     font-size: 1.75rem;
@@ -140,6 +139,9 @@ section{
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
     background: rgb(255, 255, 255);
     padding: 15px;
+}
+.product > img{
+    width: 100%;
 }
 .product-title{
     font-size: 1.75rem;
@@ -161,6 +163,32 @@ section{
     padding-top: 5px;
 }
 
+/* featured product styles */
+
+.featured-pro{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+.featured-pro > img{
+    width: 100%;
+}
+.side-description{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.side-description > h1{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.side-description > p{
+    font-weight: 700;
+    color: #6C6C6C;
+}
+
 
 
 
@@ -175,12 +203,14 @@ section{
     main{
         margin: 40px;
     }
-    .nav{
+    .nav,
+    .featured-pro{
         flex-direction: column;
         gap: 20px;
     }
 
-    .banner{
+    .banner,
+    .featured-pro{
         flex-direction: column-reverse;
     }
 
